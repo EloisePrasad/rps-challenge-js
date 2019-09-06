@@ -1,13 +1,14 @@
 describe('RockPaperScissors', function() {
   var rps;
   var computerChoice;
+  var outcome;
 
   beforeEach(function() {
     rps = new RockPaperScissors();
     computerChoice = jasmine.createSpyObj('computerChoice', ['computerPick']);
     computerChoice.computerPick.and.callFake(function() {
       return 'Rock';
-    })
+    });
   });
 
   it('user can choose rock', function() {
@@ -29,9 +30,11 @@ describe('RockPaperScissors', function() {
     expect(computerChoice.computerPick()).toEqual('Rock');
   });
 
-  it('a draw will be declared', function(){
-    rps.chooseRock();
-    computerChoice.computerPick();
-    expect()
-  });
+
+  // // Wasn't sure how to test drive declaring the winner
+  // it('a draw will be declared', function(){
+  //   rps.chooseRock();
+  //   computerChoice.computerPick();
+  //   expect(rps.outcome()).toEqual("It's a tie!")
+  // });
 });

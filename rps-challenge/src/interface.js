@@ -3,7 +3,8 @@ $(document).ready(function() {
 
   $('#rps').text('Welcome to Rock Paper Scissors');
 
-  $('#pick').text('Take your pick');
+  $('#pick').text('Take your pick ')
+  // + $('#name').val());
 
   $('#rock').click(function() {
     rps.chooseRock();
